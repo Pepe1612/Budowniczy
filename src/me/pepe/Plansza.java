@@ -2,10 +2,17 @@ package me.pepe;
 
 public class Plansza {
 
-    private static int rozmiarPlanszy;
+    private int rozmiarPlanszy;
     private int liczbaPrzeszkod;
     private boolean plansza[][];
 
+    public int getRozmiarPlanszy(){
+        return rozmiarPlanszy;
+    }
+
+    public boolean[][] getPlansza(){
+        return plansza;
+    }
 
     Plansza(int rozmiarPlanszy){
         this.rozmiarPlanszy = rozmiarPlanszy;
@@ -19,11 +26,11 @@ public class Plansza {
                 plansza[i][j] = false;
     }
 
-    void ustawPrzeszkode(int x, int y){
-        plansza[x][y] = true;
+    public void notifyWielkosc(){
+
     }
 
-    public static int getRozmiarPlanszy() {
-        return rozmiarPlanszy;
+    void ustawPrzeszkode(int x, int y){
+        plansza[x][y] = true;
     }
 }

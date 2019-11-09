@@ -1,26 +1,30 @@
 package me.pepe;
 
-import java.util.Scanner;
-
 public class Ludzik {
 
     private int xLudzika, yLudzika;
-    private int PrzeszkodyLudzika = 0;
+    private int przeszkodyLudzika = 0;
+    private Plansza klasaPlansza;
 
-
-    Ludzik(){}
-
-    Ludzik(int x, int y){
-        this.xLudzika = x;
-        this.yLudzika = y;
+    public int getPrzeszkodyLudzika(){
+        return przeszkodyLudzika;
     }
 
-    void setWspolrzedneLudzika(){
-        Scanner odpowiedz = new Scanner(System.in);
-        System.out.print("Podaj x ludzika:");
-        this.xLudzika = odpowiedz.nextInt();
-        System.out.print("Podaj y ludzika:");
-        this.yLudzika = odpowiedz.nextInt();
+    Ludzik(int x, int y, Plansza klasaPlansza) {
+        this.xLudzika = x;
+        this.yLudzika = y;
+        this.klasaPlansza = klasaPlansza;
+    }
+
+    void idzPrawo(){
+        while(true){
+            if(xLudzika + 1 < klasaPlansza.getRozmiarPlanszy() && klasaPlansza.getPlansza()[xLudzika+1][yLudzika] == false){
+                klasaPlansza.getPlansza()[xLudzika][yLudzika] = true;
+                przeszkodyLudzika++;
+                xLudzika++;
+            }
+            else break;
+        }
     }
 
     @Override
