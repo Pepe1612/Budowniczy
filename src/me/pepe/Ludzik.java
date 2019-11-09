@@ -5,6 +5,17 @@ import java.util.Scanner;
 public class Ludzik {
 
     private int xLudzika, yLudzika;
+    private int PrzeszkodyLudzika = 0;
+
+    Ludzik(){
+        this.xLudzika = 0;
+        this.yLudzika = 0;
+    }
+
+    Ludzik(int x, int y){
+        this.xLudzika = x;
+        this.yLudzika = y;
+    }
 
     void setWspolrzedneLudzika(){
         Scanner odpowiedz = new Scanner(System.in);
