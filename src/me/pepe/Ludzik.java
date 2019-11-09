@@ -8,10 +8,7 @@ public class Ludzik {
     private int PrzeszkodyLudzika = 0;
 
 
-    Ludzik(){
-        this.xLudzika = 0;
-        this.yLudzika = 0;
-    }
+    Ludzik(){}
 
     Ludzik(int x, int y){
         this.xLudzika = x;
