@@ -7,6 +7,7 @@ public class Ludzik {
     private int xLudzika, yLudzika;
     private int PrzeszkodyLudzika = 0;
 
+
     Ludzik(){
         this.xLudzika = 0;
         this.yLudzika = 0;
