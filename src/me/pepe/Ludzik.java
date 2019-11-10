@@ -6,10 +6,6 @@ public class Ludzik {
     private int przeszkodyLudzika = 0;
     private Plansza klasaPlansza;
 
-    public int getPrzeszkodyLudzika(){
-        return przeszkodyLudzika;
-    }
-
     Ludzik(int x, int y, Plansza klasaPlansza) {
         this.xLudzika = x;
         this.yLudzika = y;
@@ -59,6 +55,14 @@ public class Ludzik {
             else break;
         }
     }
+
+    public int getPrzeszkodyLudzika(){
+        return przeszkodyLudzika;
+    }
+
+    public int getxLudzika(){return xLudzika;}
+
+    public int getyLudzika(){return yLudzika;}
 
     @Override
     public String toString() {

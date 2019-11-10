@@ -6,14 +6,6 @@ public class Plansza {
     private int liczbaPrzeszkod;
     private boolean plansza[][];
 
-    public int getRozmiarPlanszy(){
-        return rozmiarPlanszy;
-    }
-
-    public boolean[][] getPlansza(){
-        return plansza;
-    }
-
     Plansza(int rozmiarPlanszy){
         this.rozmiarPlanszy = rozmiarPlanszy;
 
@@ -26,8 +18,12 @@ public class Plansza {
                 plansza[i][j] = false;
     }
 
-    public void notifyWielkosc(){
+    public int getRozmiarPlanszy(){
+        return rozmiarPlanszy;
+    }
 
+    public boolean[][] getPlansza(){
+        return plansza;
     }
 
     void ustawPrzeszkode(int x, int y){
