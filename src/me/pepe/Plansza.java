@@ -21,8 +21,8 @@ public class Plansza {
         plansza = new boolean[rozmiarPlanszy][rozmiarPlanszy];
 
         //zerowanie planszy
-        for(int i = 0; i < 5; i++)
-            for(int j = 0; j < 5; j++)
+        for(int i = 0; i < rozmiarPlanszy; i++)
+            for(int j = 0; j < rozmiarPlanszy; j++)
                 plansza[i][j] = false;
     }
 

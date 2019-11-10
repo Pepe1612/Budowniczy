@@ -27,6 +27,39 @@ public class Ludzik {
         }
     }
 
+    void idzLewo(){
+        while(true){
+            if(xLudzika - 1 >= 0 && klasaPlansza.getPlansza()[xLudzika-1][yLudzika] == false){
+                klasaPlansza.getPlansza()[xLudzika][yLudzika] = true;
+                przeszkodyLudzika++;
+                xLudzika--;
+            }
+            else break;
+        }
+    }
+
+    void idzDol(){
+        while(true){
+            if(yLudzika + 1 < klasaPlansza.getRozmiarPlanszy() && klasaPlansza.getPlansza()[xLudzika][yLudzika+1] == false){
+                klasaPlansza.getPlansza()[xLudzika][yLudzika] = true;
+                przeszkodyLudzika++;
+                yLudzika++;
+            }
+            else break;
+        }
+    }
+
+    void idzGore(){
+        while(true){
+            if(yLudzika - 1 >= 0 && klasaPlansza.getPlansza()[xLudzika][yLudzika-1] == false){
+                klasaPlansza.getPlansza()[xLudzika][yLudzika] = true;
+                przeszkodyLudzika++;
+                yLudzika--;
+            }
+            else break;
+        }
+    }
+
     @Override
     public String toString() {
         return Integer.toString(this.xLudzika) +
