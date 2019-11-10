@@ -14,5 +14,6 @@ public class Main {
         System.out.println("x:" + ludzik.getxLudzika());
         System.out.println("y:" + ludzik.getyLudzika());
         System.out.println("koniec");
+        System.out.println("koniec123");
     }
 }
